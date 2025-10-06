@@ -51,6 +51,7 @@ Redirection des flux - dup2() pour les pipes
 Gestion des erreurs - Fermeture propre des descripteurs
 
 🛡️ Fonctions Principales
+
 pipex - Fonction principale orchestrant l'exécution
 
 execute_command - Exécution d'une commande dans un processus
@@ -60,6 +61,7 @@ find_path - Recherche du chemin absolu des exécutables
 split_command - Parsing des commandes et arguments
 
 💡 Compétences Développées
+
 Programmation système UNIX
 
 Gestion des processus et du multitâche
@@ -77,16 +79,21 @@ Gestion robuste des erreurs système
 🎯 Comportement Reproduit
 Le projet reproduit exactement le comportement de :
 
+```
 bash
 # Commande shell équivalente
 < input.txt cmd1 | cmd2 > output.txt
+```
+
 📝 Cas d'Usage
+```
 bash
 # Compter le nombre de lignes contenant "error" dans un log
 ./pipex app.log "grep error" "wc -l" result.txt
 
 # Trier et dédoublonner des données
 ./pipex data.txt "sort" "uniq" sorted_data.txt
+```
 
 📁 Structure du Projet
 ```
